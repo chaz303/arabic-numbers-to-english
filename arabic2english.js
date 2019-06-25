@@ -1,5 +1,5 @@
-function oneDigit(digit) {
-  switch (digit) {
+function onesDigit(inputNumber) {
+  switch (inputNumber) {
     case 1:
       return "one";
     case 2:
@@ -21,8 +21,8 @@ function oneDigit(digit) {
   }
 }
 
-function tenToNineteen(digit) {
-  switch (digit) {
+function tenToNineteen(inputNumber) {
+  switch (inputNumber) {
     case 10:
       return "ten";
     case 11:
@@ -46,10 +46,10 @@ function tenToNineteen(digit) {
   }
 }
 
-function twentyToNinety(digit) {
+function twentyToNinety(inputNumber) {
   let output;
-  let tens = Math.floor(digit / 10);
-  let ones = digit % 10;
+  let tens = Math.floor(inputNumber / 10);
+  let remainder = inputNumber % 10;
 
   switch (tens) {
     case 2:
@@ -78,33 +78,33 @@ function twentyToNinety(digit) {
       break;
   }
 
-  if (ones != 0) {
-    return output + " " + oneDigit(ones);
+  if (remainder != 0) {
+    return output + " " + onesDigit(remainder);
   } else {
     return output;
   }
 }
 
-function twoDigit(digit) {
-  if (digit <= 19) {
-    return tenToNineteen(digit);
+function tensDigit(inputNumber) {
+  if (inputNumber <= 19) {
+    return tenToNineteen(inputNumber);
   } else {
-    return twentyToNinety(digit);
+    return twentyToNinety(inputNumber);
   }
 }
 
-function threeDigit(digit) {
-  let hundreds = Math.floor(digit / 100);
-  return oneDigit(hundreds) + " hundred";
+function hundredsDigit(inputNumber) {
+  let hundreds = Math.floor(inputNumber / 100);
+  return onesDigit(hundreds) + " hundred";
 }
 
-function conversion(digit) {
-  if (digit <= 9) {
-    return oneDigit(digit);
-  } else if (digit <= 99) {
-    return twoDigit(digit);
-  } else if (digit <= 999) {
-    return threeDigit(digit);
+function conversion(inputNumber) {
+  if (inputNumber <= 9) {
+    return onesDigit(inputNumber);
+  } else if (inputNumber <= 99) {
+    return tensDigit(inputNumber);
+  } else if (inputNumber <= 999) {
+    return hundredsDigit(inputNumber);
   }
 }
 

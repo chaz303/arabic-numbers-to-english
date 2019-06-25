@@ -1,4 +1,4 @@
-function singleDigit(digit) {
+function oneDigit(digit) {
   switch (digit) {
     case 1:
       return "one";
@@ -79,19 +79,32 @@ function twentyToNinety(digit) {
   }
 
   if (ones != 0) {
-    return output + " " + singleDigit(ones);
+    return output + " " + oneDigit(ones);
   } else {
     return output;
   }
 }
 
+function twoDigit(digit) {
+  if (digit <= 19) {
+    return tenToNineteen(digit);
+  } else {
+    return twentyToNinety(digit);
+  }
+}
+
+function threeDigit(digit) {
+  let hundreds = Math.floor(digit / 100);
+  return oneDigit(hundreds) + " hundred";
+}
+
 function conversion(digit) {
   if (digit <= 9) {
-    return singleDigit(digit);
-  } else if (digit <= 19) {
-    return tenToNineteen(digit);
+    return oneDigit(digit);
   } else if (digit <= 99) {
-    return twentyToNinety(digit);
+    return twoDigit(digit);
+  } else if (digit <= 999) {
+    return threeDigit(digit);
   }
 }
 

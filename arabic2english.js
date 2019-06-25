@@ -48,11 +48,34 @@ function tenToNineteen(digit) {
   }
 }
 
+function twentyToNinety(digit) {
+  switch (digit) {
+    case 20:
+      return "twenty";
+    case 30:
+      return "thirty";
+    case 40:
+      return "fourty";
+    case 50:
+      return "fifty";
+    case 60:
+      return "sixty";
+    case 70:
+      return "seventy";
+    case 80:
+      return "eighty";
+    case 90:
+      return "ninety";
+  }
+}
+
 function conversion(digit) {
   if (digit <= 9) {
     return singleDigit(digit);
   } else if (digit <= 19) {
     return tenToNineteen(digit);
+  } else if (digit <= 99) {
+    return twentyToNinety(digit);
   }
 }
 

@@ -30,3 +30,12 @@ describe("Convert two digit Arabic numerals 20 thru 90 by tens to English", func
     assert.equal(app(90), "ninety");
   });
 });
+
+describe("Convert two digit Arabic numerals 21 thru 99 to English", function() {
+  it("Given the input 21, function should return twenty one", function() {
+    assert.equal(app(21), "twenty one");
+  });
+  it("Given the input 99, function should return ninety nine", function() {
+    assert.equal(app(99), "ninety nine");
+  });
+});

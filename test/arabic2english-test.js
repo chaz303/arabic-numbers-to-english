@@ -2,6 +2,9 @@ const assert = require("chai").assert;
 const app = require("../arabic2english");
 
 describe("Convert single digit Arabic numerals to English", function() {
+  it("Given the input '0', function should return 'zero'", function() {
+    assert.equal(app(0), "zero");
+  });
   it("Given the input '1', function should return 'one'", function() {
     assert.equal(app(1), "one");
   });

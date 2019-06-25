@@ -1,5 +1,7 @@
 function onesDigit(inputNumber) {
   switch (inputNumber) {
+    case 0:
+      return "zero";
     case 1:
       return "one";
     case 2:

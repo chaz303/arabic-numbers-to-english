@@ -95,7 +95,14 @@ function tensDigit(inputNumber) {
 
 function hundredsDigit(inputNumber) {
   let hundreds = Math.floor(inputNumber / 100);
-  return onesDigit(hundreds) + " hundred";
+  let remainder = inputNumber % 100;
+  if (remainder >= 1 && remainder <= 9) {
+    return onesDigit(hundreds) + " hundred " + onesDigit(remainder);
+  } else if (remainder >= 10 && remainder <= 99) {
+    return onesDigit(hundreds) + " hundred " + tensDigit(remainder);
+  } else {
+    return onesDigit(hundreds) + " hundred";
+  }
 }
 
 function conversion(inputNumber) {

@@ -64,7 +64,7 @@ describe("Convert three digit Arabic numerals 101 thru 999 to English", function
   });
 });
 
-describe("Convert four digit Arabic numerals 1,000 thru 999,000 by thousands to English", function() {
+describe("Convert Arabic numerals 1,000 thru 999,000 by thousands to English", function() {
   it("Given the input '1000', function should return 'one thousand'", function() {
     assert.equal(app(1000), "one thousand");
   });
@@ -73,5 +73,20 @@ describe("Convert four digit Arabic numerals 1,000 thru 999,000 by thousands to 
   });
   it("Given the input '999000', function should return 'nine hundred ninety nine thousand'", function() {
     assert.equal(app(999000), "nine hundred ninety nine thousand");
+  });
+});
+
+describe("Convert Arabic numerals 1,001 thru 999,999 to English", function() {
+  it("Given the input '1001', function should return 'one thousand'", function() {
+    assert.equal(app(1001), "one thousand one");
+  });
+  it("Given the input '10010', function should return 'ten thousand ten'", function() {
+    assert.equal(app(10010), "ten thousand ten");
+  });
+  it("Given the input '999999', function should return 'nine hundred ninety nine thousand nine hundred ninety nine'", function() {
+    assert.equal(
+      app(999999),
+      "nine hundred ninety nine thousand nine hundred ninety nine"
+    );
   });
 });

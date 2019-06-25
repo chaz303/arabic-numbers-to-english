@@ -1,7 +1,5 @@
 function singleDigit(digit) {
   switch (digit) {
-    case 0:
-      return "zero";
     case 1:
       return "one";
     case 2:
@@ -49,23 +47,41 @@ function tenToNineteen(digit) {
 }
 
 function twentyToNinety(digit) {
-  switch (digit) {
-    case 20:
-      return "twenty";
-    case 30:
-      return "thirty";
-    case 40:
-      return "fourty";
-    case 50:
-      return "fifty";
-    case 60:
-      return "sixty";
-    case 70:
-      return "seventy";
-    case 80:
-      return "eighty";
-    case 90:
-      return "ninety";
+  let output;
+  let tens = Math.floor(digit / 10);
+  let ones = digit % 10;
+
+  switch (tens) {
+    case 2:
+      output = "twenty";
+      break;
+    case 3:
+      output = "thirty";
+      break;
+    case 4:
+      output = "forty";
+      break;
+    case 5:
+      output = "fifty";
+      break;
+    case 6:
+      output = "sixty";
+      break;
+    case 7:
+      output = "seventy";
+      break;
+    case 8:
+      output = "eighty";
+      break;
+    case 9:
+      output = "ninety";
+      break;
+  }
+
+  if (ones != 0) {
+    return output + " " + singleDigit(ones);
+  } else {
+    return output;
   }
 }
 

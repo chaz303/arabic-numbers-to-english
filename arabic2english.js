@@ -117,4 +117,6 @@ function conversion(inputNumber) {
   }
 }
 
+console.log(conversion(parseInt(process.argv[2])));
+
 module.exports = conversion;

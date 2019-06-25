@@ -39,3 +39,12 @@ describe("Convert two digit Arabic numerals 21 thru 99 to English", function() {
     assert.equal(app(99), "ninety nine");
   });
 });
+
+describe("Convert three digit Arabic numerals 100 thru 900 by hundreds to English", function() {
+  it("Given the input 100, function should return one hundred", function() {
+    assert.equal(app(100), "one hundred");
+  });
+  it("Given the input 900, function should return nine hundred", function() {
+    assert.equal(app(900), "nine hundred");
+  });
+});

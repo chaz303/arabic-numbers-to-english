@@ -53,6 +53,20 @@ function hundredsDigit(inputNumber) {
   }
 }
 
+function thousands(inputNumber) {
+  let output;
+  let thousands = Math.floor(inputNumber / 1000);
+  let remainder = inputNumber % 1000;
+  if (thousands <= 19) {
+    output = numberDict[thousands] + " thousand";
+  } else if (thousands <= 99) {
+    output = tensDigit(thousands) + " thousand";
+  } else {
+    output = hundredsDigit(thousands) + " thousand";
+  }
+  return output;
+}
+
 function conversion(inputNumber) {
   if (inputNumber <= 19) {
     return numberDict[inputNumber];
@@ -60,6 +74,8 @@ function conversion(inputNumber) {
     return tensDigit(inputNumber);
   } else if (inputNumber <= 999) {
     return hundredsDigit(inputNumber);
+  } else if (inputNumber <= 999999) {
+    return thousands(inputNumber);
   }
 }
 

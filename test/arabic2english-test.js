@@ -77,7 +77,7 @@ describe("Convert Arabic numerals 1,000 thru 999,000 by thousands to English", f
 });
 
 describe("Convert Arabic numerals 1,001 thru 999,999 to English", function() {
-  it("Given the input '1001', function should return 'one thousand'", function() {
+  it("Given the input '1001', function should return 'one thousand one'", function() {
     assert.equal(app(1001), "one thousand one");
   });
   it("Given the input '10010', function should return 'ten thousand ten'", function() {

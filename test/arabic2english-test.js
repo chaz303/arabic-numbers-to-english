@@ -10,7 +10,7 @@ describe("Convert single digit Arabic numerals to English", function() {
   });
 });
 
-describe("Convert two digit Arabic numerals to English", function() {
+describe("Convert two digit Arabic numerals 10 thru 19 to English", function() {
   it("Given the input 10, function should return ten", function() {
     assert.equal(app(10), "ten");
   });
@@ -19,5 +19,14 @@ describe("Convert two digit Arabic numerals to English", function() {
   });
   it("Given the input 19, function should return nineteen", function() {
     assert.equal(app(19), "nineteen");
+  });
+});
+
+describe("Convert two digit Arabic numerals 20 thru 90 by tens to English", function() {
+  it("Given the input 20, function should return twenty", function() {
+    assert.equal(app(20), "twenty");
+  });
+  it("Given the input 90, function should return ninety", function() {
+    assert.equal(app(90), "ninety");
   });
 });

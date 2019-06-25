@@ -23,7 +23,7 @@ function singleDigit(digit) {
   }
 }
 
-function doubleDigit(digit) {
+function tenToNineteen(digit) {
   switch (digit) {
     case 10:
       return "ten";
@@ -52,7 +52,7 @@ function conversion(digit) {
   if (digit <= 9) {
     return singleDigit(digit);
   } else if (digit <= 19) {
-    return doubleDigit(digit);
+    return tenToNineteen(digit);
   }
 }
 

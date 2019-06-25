@@ -1,0 +1,15 @@
+{
+  "name": "arabic2english",
+  "version": "1.0.0",
+  "description": "Arabic numeral to English word converter",
+  "main": "converter.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}

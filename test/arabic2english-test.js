@@ -60,7 +60,7 @@ describe("Convert three digit Arabic numerals 101 thru 999 to English", function
     assert.equal(app(111), "one hundred eleven");
   });
   it("Given the input '999', function should return 'nine hundred ninety nine'", function() {
-    assert.equal(app(999), "nine hundred ninety nine");
+    assert.equal(app(999), "nine hundred ninety-nine");
   });
 });
 
@@ -72,7 +72,7 @@ describe("Convert Arabic numerals 1,000 thru 999,000 by thousands to English", f
     assert.equal(app(10000), "ten thousand");
   });
   it("Given the input '999000', function should return 'nine hundred ninety nine thousand'", function() {
-    assert.equal(app(999000), "nine hundred ninety nine thousand");
+    assert.equal(app(999000), "nine hundred ninety-nine thousand");
   });
 });
 
@@ -86,7 +86,7 @@ describe("Convert Arabic numerals 1,001 thru 999,999 to English", function() {
   it("Given the input '999999', function should return 'nine hundred ninety nine thousand nine hundred ninety nine'", function() {
     assert.equal(
       app(999999),
-      "nine hundred ninety nine thousand nine hundred ninety nine"
+      "nine hundred ninety-nine thousand nine hundred ninety-nine"
     );
   });
 });

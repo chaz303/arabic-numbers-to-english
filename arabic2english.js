@@ -33,7 +33,7 @@ function tens(inputNumber) {
   let tens = Math.floor(inputNumber / 10) * 10;
   let remainder = inputNumber % 10;
   if (remainder != 0) {
-    return numberDict[tens] + " " + numberDict[remainder];
+    return numberDict[tens] + "-" + numberDict[remainder];
   } else {
     return numberDict[tens];
   }

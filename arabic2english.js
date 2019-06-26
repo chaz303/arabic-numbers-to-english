@@ -61,6 +61,17 @@ function thousands(inputNumber) {
   }
 }
 
+function millions(inputNumber) {
+  let millions = Math.floor(inputNumber / 1000000);
+  let remainder = inputNumber % 1000000;
+  let output = conversion(millions) + " million";
+  if (remainder != 0) {
+    return output + " " + conversion(remainder);
+  } else {
+    return output;
+  }
+}
+
 function conversion(inputNumber) {
   if (inputNumber <= 19) {
     return numberDict[inputNumber];
@@ -70,6 +81,10 @@ function conversion(inputNumber) {
     return hundreds(inputNumber);
   } else if (inputNumber <= 999999) {
     return thousands(inputNumber);
+  } else if (inputNumber <= 999999999) {
+    return millions(inputNumber);
+  } else {
+    return "Number is too large.";
   }
 }
 

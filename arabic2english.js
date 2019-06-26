@@ -83,8 +83,6 @@ function conversion(inputNumber) {
     return thousands(inputNumber);
   } else if (inputNumber <= 999999999) {
     return millions(inputNumber);
-  } else {
-    return "Number is too large.";
   }
 }
 

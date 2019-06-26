@@ -35,10 +35,10 @@ describe("Convert two digit Arabic numerals 20 thru 90 by tens to English", func
 });
 
 describe("Convert two digit Arabic numerals 21 thru 99 to English", function() {
-  it("Given the input '21', function should return 'twenty one'", function() {
+  it("Given the input '21', function should return 'twenty-one'", function() {
     assert.equal(app(21), "twenty-one");
   });
-  it("Given the input '99', function should return 'ninety nine'", function() {
+  it("Given the input '99', function should return 'ninety-nine'", function() {
     assert.equal(app(99), "ninety-nine");
   });
 });
@@ -59,7 +59,7 @@ describe("Convert three digit Arabic numerals 101 thru 999 to English", function
   it("Given the input '111', function should return 'one hundred eleven'", function() {
     assert.equal(app(111), "one hundred eleven");
   });
-  it("Given the input '999', function should return 'nine hundred ninety nine'", function() {
+  it("Given the input '999', function should return 'nine hundred ninety-nine'", function() {
     assert.equal(app(999), "nine hundred ninety-nine");
   });
 });
@@ -71,7 +71,7 @@ describe("Convert Arabic numerals 1,000 thru 999,000 by thousands to English", f
   it("Given the input '10000', function should return 'ten thousand'", function() {
     assert.equal(app(10000), "ten thousand");
   });
-  it("Given the input '999000', function should return 'nine hundred ninety nine thousand'", function() {
+  it("Given the input '999000', function should return 'nine hundred ninety-nine thousand'", function() {
     assert.equal(app(999000), "nine hundred ninety-nine thousand");
   });
 });
@@ -83,10 +83,34 @@ describe("Convert Arabic numerals 1,001 thru 999,999 to English", function() {
   it("Given the input '10010', function should return 'ten thousand ten'", function() {
     assert.equal(app(10010), "ten thousand ten");
   });
-  it("Given the input '999999', function should return 'nine hundred ninety nine thousand nine hundred ninety nine'", function() {
+  it("Given the input '999999', function should return 'nine hundred ninety-nine thousand nine hundred ninety-nine'", function() {
     assert.equal(
       app(999999),
       "nine hundred ninety-nine thousand nine hundred ninety-nine"
+    );
+  });
+});
+
+describe("Convert Arabic numerals 1,000,000 thru 999,999,999 to English", function() {
+  it("Given the input '1000000', function should return 'one million'", function() {
+    assert.equal(app(1000000), "one million");
+  });
+  it("Given the input '1000001', function should return 'one million one'", function() {
+    assert.equal(app(1000001), "one million one");
+  });
+  it("Given the input '10000000', function should return 'ten million'", function() {
+    assert.equal(app(10000000), "ten million");
+  });
+  it("Given the input '10000010', function should return 'ten million ten'", function() {
+    assert.equal(app(10000010), "ten million ten");
+  });
+  it("Given the input '999000000', function should return 'nine hundred ninety-nine million'", function() {
+    assert.equal(app(999000000), "nine hundred ninety-nine million");
+  });
+  it("Given the input '999999999', function should return 'nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine'", function() {
+    assert.equal(
+      app(999999999),
+      "nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine"
     );
   });
 });
